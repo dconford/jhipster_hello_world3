@@ -132,6 +132,13 @@
                     </div>
                 </div>
 
+
+                <td>
+                    <div *ngIf="reportedEvents.neighborhoodData">
+                        <a [routerLink]="['/neighborhood-data', reportedEvents.neighborhoodData?.id, 'view']" >{{ reportedEvents.neighborhoodData?.neighborhoodName }}</a>
+                    </div>
+                </td>
+
                 <button type="submit" [disabled]="registerForm.invalid" class="btn btn-primary">Register</button>
             </form>
 

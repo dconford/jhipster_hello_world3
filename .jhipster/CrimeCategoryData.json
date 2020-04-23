@@ -1,0 +1,27 @@
+{
+    "name": "CrimeCategoryData",
+    "fields": [
+        {
+            "fieldName": "crimeCategory",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "reportedEvents",
+            "otherEntityRelationshipName": "crimeCategoryData",
+            "relationshipName": "reportedEvents"
+        }
+    ],
+    "changelogDate": "20200414213600",
+    "entityTableName": "crime_category_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}

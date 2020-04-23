@@ -1,0 +1,27 @@
+{
+    "name": "CodedDateData",
+    "fields": [
+        {
+            "fieldName": "codedDateString",
+            "fieldType": "String"
+        }
+    ],
+    "relationships": [
+        {
+            "relationshipType": "one-to-many",
+            "otherEntityName": "reportedEvents",
+            "otherEntityRelationshipName": "codedDateData",
+            "relationshipName": "reportedEvents"
+        }
+    ],
+    "changelogDate": "20200414213800",
+    "entityTableName": "coded_date_data",
+    "dto": "no",
+    "pagination": "no",
+    "service": "serviceImpl",
+    "jpaMetamodelFiltering": false,
+    "fluentMethods": true,
+    "readOnly": false,
+    "clientRootFolder": "",
+    "applications": "*"
+}
