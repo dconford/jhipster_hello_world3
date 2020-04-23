@@ -19,8 +19,9 @@
                     class="btn btn-info">
                 <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
             </button>
-
             <button type="button"
+                    *jhiHasAnyAuthority="'ROLE_ADMIN'"
+                    display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                     [routerLink]="['/crime-category-data', crimeCategoryData.id, 'edit']"
                     class="btn btn-primary">
                 <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>

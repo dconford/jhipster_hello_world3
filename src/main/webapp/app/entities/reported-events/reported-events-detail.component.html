@@ -127,6 +127,8 @@
             </button>
 
             <button type="button"
+                    *jhiHasAnyAuthority="'ROLE_ADMIN'"
+                    display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                     [routerLink]="['/reported-events', reportedEvents.id, 'edit']"
                     class="btn btn-primary">
                 <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>

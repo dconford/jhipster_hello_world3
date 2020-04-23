@@ -92,7 +92,8 @@
                             <a [routerLink]="['/coded-date-data', reportedEvents.codedDateData?.id, 'view']" >{{ reportedEvents.codedDateData?.codedDateString }}</a>
                         </div>
                     </td>
-                    <td *jhiHasAnyAuthority="'ROLE_ADMIN'" class="text-right" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+<!--                    <td *jhiHasAnyAuthority="'ROLE_ADMIN'" class="text-right" display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">-->
+                    <td>
                         <div class="btn-group">
                             <button type="submit"
                                     [routerLink]="['/reported-events', reportedEvents.id, 'view']"
@@ -102,13 +103,18 @@
                             </button>
 
                             <button type="submit"
+                                    *jhiHasAnyAuthority="'ROLE_ADMIN'"
+                                    display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
                                     [routerLink]="['/reported-events', reportedEvents.id, 'edit']"
                                     class="btn btn-primary btn-sm">
                                 <fa-icon icon="pencil-alt"></fa-icon>
                                 <span class="d-none d-md-inline">Edit</span>
                             </button>
 
-                            <button type="submit" (click)="delete(reportedEvents)"
+                            <button type="submit"
+                                    *jhiHasAnyAuthority="'ROLE_ADMIN'"
+                                    display="dynamic" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"
+                                    (click)="delete(reportedEvents)"
                                     class="btn btn-danger btn-sm">
                                 <fa-icon icon="times"></fa-icon>
                                 <span class="d-none d-md-inline">Delete</span>
