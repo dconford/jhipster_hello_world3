@@ -5,6 +5,8 @@ import { LoginModalService } from 'app/core/login/login-modal.service';
 import { AccountService } from 'app/core/auth/account.service';
 import { Account } from 'app/core/user/account.model';
 
+import { IReportedEvents } from 'app/shared/model/reported-events.model';
+
 @Component({
   selector: 'jhi-home',
   templateUrl: './home.component.html',
