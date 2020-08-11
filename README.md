@@ -1,3 +1,21 @@
+# Purpose
+St Louis Metro Police data is only available as a PDF report or downloadable csv files.  I wanted to build a database, upload the csv files and create a more interactive front end that would emulate the report in a 21st century fashion.  There is an actual need in the community for better access to the data, the data is publicly available.  It would demonstrate my abilities and give me a public project I can show to potential employers.
+
+Here are a couple quick links to the pages where the data currently resides.
+
+- [SLMPD Downloadable Crime Files](https://www.slmpd.org/Crimereports.shtml) --
+This is the basic summary report for the month (monthly total by category) and the csv file containing the individual crime reports.
+
+- [SLMPD Crime Statistics](https://www.slmpd.org/crime_stats.shtml) -- 
+This is the summary report for the month by category (including secondary categories that I am not concerned with yet) and detailed by individual neighborhoods. I would be looking to replicate this structure using dropdowns in a query tool to select date by month, City or individual neighborhood. Later refinements would be graphically tracking a crime category (or all crime) for a neighborhood (or the city as a whole) over time so users would visually see that crime rises and falls.
+
+- [CrimeDataFrequentlyAskedQuestions.pdf](https://www.slmpd.org/Crime/CrimeDataFrequentlyAskedQuestions.pdf)
+Background details about the dataset. Further details on crime codes defer to FBI UCR data codes, so I am currently not examining the last 4 digits of the crime code field.
+If you look over the PDF, you will see the structure I would like to replicate.  The report has monthly crime totals by category for the city as a whole, as well as individual neighborhoods. To see your neighborhood requires downloading and scrolling through the document.
+
+Placing these records in a database (I have a basic working version in mySQL running locally) and then having a query tool to display the chosen totals (by month and neighborhood for first iteration), would provide the basic functionality of the report in a more accessible format.
+Further revisions would include additional selection criteria, graphic representation of data over time and a color coded (red, yellow, green) representation of the basic comparison stats they currently include by default. Basically users want to see at a glance (red yellow green) if crime is up or down (per category or neighborhood). This is a constant debate on local social media (FB, NextDoor, etc) and the current system makes it intentionally hard to get at the data.
+
 # jhipster_hello_world3
 
 This application was generated using JHipster 6.7.1, you can find documentation and help at [https://www.jhipster.tech/documentation-archive/v6.7.1](https://www.jhipster.tech/documentation-archive/v6.7.1).
